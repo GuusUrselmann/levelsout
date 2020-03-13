@@ -77,7 +77,7 @@
         },
         methods: {
             submit() {
-                this.$inertia.post('http://localhost/levelsout/public/login', this.formlogin)
+                this.$inertia.post(url()+'/login', this.formlogin)
             },
         },
     }

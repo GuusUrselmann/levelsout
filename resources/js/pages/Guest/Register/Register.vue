@@ -89,7 +89,7 @@
         },
         methods: {
             submit() {
-                this.$inertia.post('http://localhost/levelsout/public/register', this.formregister)
+                this.$inertia.post(url()+'/register', this.formregister)
             },
         },
     }

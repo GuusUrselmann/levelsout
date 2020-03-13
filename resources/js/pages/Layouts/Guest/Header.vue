@@ -46,7 +46,7 @@
   export default {
       methods: {
           logout() {
-              this.$inertia.post('http://localhost/levelsout/public/logout')
+              this.$inertia.post(url()+'/logout')
           },
           sidebarToggle() {
               this.sidebarToggled = this.sidebarToggled ? false : true;
