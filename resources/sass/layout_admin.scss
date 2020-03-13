@@ -1,0 +1,292 @@
+@import 'variables';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+div,input,select,textarea {
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    z-index: 999;
+}
+.page-sections {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+}
+
+/*Style layout*/
+/*Menus*/
+.menu-vertical {
+
+    .menu-item {
+        width: 100%;
+
+    }
+    .item-title {
+        color: #fff;
+    }
+    .submenu {
+        .menu-item {
+            width: 100%;
+        }
+    }
+}
+
+/*Backgrounds*/
+.background-cover {
+    background-size: cover;
+    background-position: center center;
+}
+
+/*Header*/
+header {
+    .header-bar {
+        height: 25px;
+        width: 100%;
+        border-bottom: 1px solid #1c1c1c;
+        background-color: $theme-main;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        color: #fff;
+        .nav-global {
+            float: left;
+        }
+        .menu-global {
+            width: 150px;
+            margin-left: 5px;
+            line-height: 25px;
+            &:hover {
+                .submenu {
+                    display: block;
+                }
+            }
+        }
+
+        .menu-global {
+            .item-title {
+                padding: 0px 20px;
+            }
+            .submenu {
+                position: relative;
+                width: 100%;
+                display: none;
+            }
+            .menu-item {
+                height: 25px;
+                line-height: 25px;
+            }
+            .submenu {
+                .menu-item {
+                    height: 25px;
+                    line-height: 25px;
+                }
+                .item-title {
+                    padding: 0px 5px;
+                }
+            }
+        }
+        .submenu {
+            .menu-item {
+                background-color: $grey-med;
+                border-left: 3px solid $grey-med;
+                &:hover {
+                    border-color: $theme-orange;
+                }
+            }
+        }
+        .user-welcome {
+            height: 100%;
+            padding-right: 15px;
+            line-height: 25px;
+            float: right;
+            display: block;
+        }
+    }
+}
+
+/*Content*/
+main {
+    height: 100vh;
+}
+.page-content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    margin-left: 250px;
+    padding-top: 25px;
+    transition: all 0.2s ease-in-out 0s;
+    background-color: #ececec;
+}
+
+/*Sidebar*/
+.sidebar {
+    overflow: visible;
+    width: 250px;
+    height: 100vh;
+    padding-top: 25px;
+    position: fixed;
+    background-color: $theme-dark-3;
+    border-right: 1px solid $grey-med;
+    color: #fff;
+    transition: width ease-in-out .2s;
+    &:hover {
+        .sidebar-toggle {
+            right: -15px;
+            color: #fff;
+        }
+    }
+}
+.sidebar-toggle {
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: $theme-dark-3;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: $theme-dark-3;
+    transition: right ease-in-out .1s, color ease-in-out .1s;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.sidebar-content {
+
+    .sidebar-logo {
+        width: 100%;
+        height: 160px;
+        padding-top: 20px;
+    }
+    .sidebar-logo {
+        .bg-logo {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border: 1px solid $theme-orange;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+    #smfull {
+        .menu-item {
+            width: 100%;
+            box-sizing: border-box;
+            &:last-child {
+                .item-title {
+                    border-bottom: 1px solid $theme-dark-1;
+                }
+            }
+        }
+        .menu-item.active {
+            .item-title {
+                border-left-color: $theme-orange;
+            }
+            .submenu {
+                display: block;
+                .item-title {
+                    border-left-color: transparent;
+                }
+            }
+        }
+        .item-title {
+            height: 45px;
+            line-height: 45px;
+            font-size: 22px;
+            border-top: 1px solid $theme-dark-1;
+            border-left: 5px solid transparent;
+            padding-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .menu-item
+        i {
+            width: 100%;
+        }
+        .submenu {
+            display: none;
+            .menu-item .item-title {
+                height: 35px;
+                line-height: 35px;
+                border-bottom: none;
+                background-color: $grey-med;
+            }
+        }
+    }
+    #smsmall {
+        display: none;
+        color: #fff;
+        .sidebar-logo {
+            width: 100%;
+            height: 160px;
+            padding-top: 20px;
+        }
+        .menu-item {
+            width: 100%;
+            box-sizing: border-box;
+            &:last-child  {
+                .item-title {
+                    border-bottom: 1px solid $theme-dark-1;
+                }
+            }
+            .item-title {
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                font-size: 22px;
+                text-align: center;
+                border-top: 1px solid $theme-dark-1;
+                border-left: 5px solid transparent;
+            }
+        }
+        .menu-item.active {
+            .item-title {
+                border-left-color: $theme-orange;
+            }
+        }
+        i {
+            color: #fff;
+        }
+    }
+}
+
+
+/*CONTENT BLOCKS*/
+.page-sections {
+    .content-block {
+        width: 100%;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    }
+    .block-header {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: $grey-med;
+        .block-title {
+            padding-left: 10px;
+            font-size: 22px;
+        }
+    }
+    .block-body {
+        width: 100%;
+        min-height: 100px;
+    }
+}

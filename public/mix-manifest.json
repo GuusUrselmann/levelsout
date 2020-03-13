@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/layout_admin.css": "/css/layout_admin.css",
+    "/css/layout_app.css": "/css/layout_app.css",
+    "/css/layout_guest.css": "/css/layout_guest.css",
+    "/css/blocks_admin.css": "/css/blocks_admin.css",
+    "/css/blocks_app.css": "/css/blocks_app.css",
+    "/css/blocks_guest.css": "/css/blocks_guest.css",
+    "/css/responsive_guest.css": "/css/responsive_guest.css",
+    "/css/grid_admin.css": "/css/grid_admin.css"
+}
