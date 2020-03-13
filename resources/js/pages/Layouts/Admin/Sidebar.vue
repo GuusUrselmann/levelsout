@@ -53,6 +53,23 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="menu-item">
+                            <inertia-link :href="$page.paths.url+'/admin/questions'">
+                                <div class="item-title">
+                                    <span style="display: block; width: 35px; height: 45px; float: left; text-align: center;"><i class="fas fa-question"></i></span>
+                                    <span style="display: block; float: left; padding-left: 10px;">questions</span>
+                                </div>
+                            </inertia-link>
+                            <ul class="submenu">
+                                <li class="menu-item">
+                                    <inertia-link :href="$page.paths.url+'/admin/questions'">
+                                        <div class="item-title">
+                                            all questions
+                                        </div>
+                                    </inertia-link>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

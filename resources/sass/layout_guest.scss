@@ -68,6 +68,7 @@ ul {
     }
     &:hover {
         cursor: pointer;
+        color: #fff;
     }
 }
 
@@ -134,8 +135,28 @@ header {
                                     width: 100%;
                                     height: 45px;
                                     color: #fff;
+                                    span {
+                                        display: block;
+                                        float: left;
+                                    }
                                     &:hover {
                                         color: $theme-orange;
+                                    }
+                                }
+                                &.button {
+                                    margin: auto;
+                                    margin-top: 15px;
+                                    .item-title {
+                                        height: 35px;
+                                        span {
+                                            width: 100%;
+                                            text-align: center;
+                                        }
+                                    }
+                                    &:hover {
+                                        span {
+                                            color: #fff;
+                                        }
                                     }
                                 }
                             }

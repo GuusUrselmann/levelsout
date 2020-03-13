@@ -26,7 +26,7 @@ class AdminTasksController extends Controller
     public function tasks()
     {
          return Inertia::render('Admin/Tasks/Tasks', [
-             //'tasks' => Task::all()
+             'tasks' => Task::all()
          ]);
     }
 }

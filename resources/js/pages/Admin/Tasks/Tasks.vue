@@ -1,6 +1,8 @@
 <template>
     <layout >
-        Success? nice!
+        <pre>
+            {{tasks}}
+        </pre>
     </layout>
 </template>
 
@@ -9,6 +11,9 @@
     export default {
         components: {
             Layout
+        },
+        props: {
+            tasks: Array
         }
     }
 </script>

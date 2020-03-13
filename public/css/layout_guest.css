@@ -78,6 +78,7 @@ ul {
 
 .button:hover {
   cursor: pointer;
+  color: #fff;
 }
 
 /*Backgrounds*/
@@ -160,8 +161,31 @@ header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-ite
   color: #fff;
 }
 
+header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a .item-title span {
+  display: block;
+  float: left;
+}
+
 header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a .item-title:hover {
   color: #bf9418;
+}
+
+header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a.button {
+  margin: auto;
+  margin-top: 15px;
+}
+
+header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a.button .item-title {
+  height: 35px;
+}
+
+header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a.button .item-title span {
+  width: 100%;
+  text-align: center;
+}
+
+header .header-bar .header-nav .header-menu .menu.header .menu-sidebar .menu-item a.button:hover span {
+  color: #fff;
 }
 
 header .header-bar .header-nav .header-menu .menu.header.toggled {

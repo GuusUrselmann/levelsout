@@ -14,7 +14,7 @@
                                 </a>
                             </li>
                             <li class="menu-item" v-if="$page.user">
-                                <a class="dropdown-item" v-on:click.prevent="logout">
+                                <a class="dropdown-item button button-orange" v-on:click.prevent="logout">
                                      <div class="item-title">
                                          <span style="display: block; float: left;">logout</span>
                                      </div>
@@ -26,9 +26,9 @@
                     </div>
                 </div>
                 <div class="header-logo">
-                    <inertia-link :href="$page.paths.url">
+                    <a :href="$page.paths.url">
                         LEVELS OUT
-                    </inertia-link>
+                    </a>
                 </div>
                 <div class="header-options">
                     <i class="fas fa-cog"></i>

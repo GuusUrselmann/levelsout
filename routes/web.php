@@ -17,6 +17,7 @@ Auth::routes();
 Route::group(['prefix' => '/'], function() {
     Route::get('/', 'Guest\GuestHomeController@home');
     Route::get('/home', 'Guest\GuestHomeController@home');
+    Route::get('/about', 'Guest\GuestHomeController@about');
 });
 Route::group(['prefix' => '/app'], function() {
     Route::get('/', 'App\AppHomeController@home');
@@ -30,5 +31,8 @@ Route::group(['prefix'=>'/admin'], function() {
     });
     Route::group(['prefix'=>'/tasks'], function() {
         Route::get('/', 'Admin\AdminTasksController@tasks');
+    });
+    Route::group(['prefix'=>'/questions'], function() {
+        Route::get('/', 'Admin\AdminQuestionsController@questions');
     });
 });

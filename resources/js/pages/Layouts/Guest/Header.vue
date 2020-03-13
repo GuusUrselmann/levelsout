@@ -9,21 +9,28 @@
                             <li class="menu-item">
                                 <inertia-link :href="$page.paths.url">
                                     <div class="item-title">
-                                        <span style="display: block; float: left;">Home</span>
+                                        <span>Home</span>
                                     </div>
                                 </inertia-link>
                             </li>
                             <li class="menu-item">
                                 <inertia-link :href="$page.paths.url+'/about'">
                                     <div class="item-title">
-                                        <span style="display: block; float: left;">About</span>
+                                        <span>About</span>
                                     </div>
                                 </inertia-link>
                             </li>
-                            <li class="menu-item" v-if="$page.user">
-                                <a class="dropdown-item" v-on:click.prevent="logout">
+                            <li class="menu-item" v-if="isAdmin($page.user)">
+                                <a class="dropdown-item" :href="$page.paths.url+'/admin'">
                                      <div class="item-title">
-                                         <span style="display: block; float: left;">logout</span>
+                                         <span>Admin</span>
+                                     </div>
+                                </a>
+                            </li>
+                            <li class="menu-item" v-if="$page.user">
+                                <a class="dropdown-item button button-orange" v-on:click.prevent="logout">
+                                     <div class="item-title">
+                                         <span>logout</span>
                                      </div>
                                 </a>
                             </li>
@@ -55,6 +62,12 @@
               if(this.sidebarToggled) {
                   this.sidebarToggled = false;
               }
+          },
+          isAdmin(user) {
+              if(user.userlevel == 'admin' || user.userlevel == 'owner') {
+                  return true;
+              }
+              return false;
           }
       },
       data() {

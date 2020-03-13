@@ -23,4 +23,8 @@ class GuestHomeController extends Controller
     {
         return Inertia::render('Guest/Home/Home');
     }
+    public function about()
+    {
+        return Inertia::render('Guest/Home/About');
+    }
 }
