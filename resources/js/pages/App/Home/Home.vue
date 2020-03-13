@@ -3,7 +3,7 @@
         <div class="block profile">
             <div class="profile-info">
                 <div class="info-image">
-                    <div class="image-inner background-cover"  :style="'background-image: url('+$page.paths.asset+'/images/oshi.jpg)'">
+                    <div class="image-inner background-cover"  :style="'background-image: url('+$page.paths.asset+'images/oshi.jpg)'">
                     </div>
                 </div>
                 <div class="info">
@@ -20,7 +20,7 @@
                     <div class="level-top">
                         {{index==0?'LEVEL ':''}}{{level.level}}
                     </div>
-                    <div class="level-bar" v-bind:class="{complete: ($page.user.level>level.level)}">
+                    <div class="level-bar" v-bind:class="{complete: $page.user.level>level.level}">
                     </div>
                 </div>
             </div>

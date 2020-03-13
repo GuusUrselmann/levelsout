@@ -71,7 +71,7 @@
         methods: {
             logout() {
                 document.getElementById('logout-form').submit();
-            },
+            }
         },
         components: {
             Sidebar

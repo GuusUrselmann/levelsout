@@ -6,17 +6,24 @@
                     <i class="fas fa-bars" id="menu-icon"  v-on:click="sidebarToggle"></i>
                     <div class="menu header" id="sidebar" v-bind:class="{toggled: sidebarToggled}" >
                         <ul class="menu menu-vertical menu-sidebar">
+                            <li class="menu-item">
+                                <a class="dropdown-item" :href="$page.paths.url">
+                                     <div class="item-title">
+                                         <span>Home</span>
+                                     </div>
+                                </a>
+                            </li>
                             <li class="menu-item" v-if="isAdmin($page.user)">
                                 <a class="dropdown-item" :href="$page.paths.url+'/admin'">
                                      <div class="item-title">
-                                         <span style="display: block; float: left;">admin</span>
+                                         <span>Admin</span>
                                      </div>
                                 </a>
                             </li>
                             <li class="menu-item" v-if="$page.user">
                                 <a class="dropdown-item button button-orange" v-on:click.prevent="logout">
                                      <div class="item-title">
-                                         <span style="display: block; float: left;">logout</span>
+                                         <span>logout</span>
                                      </div>
                                 </a>
                                 <form id="logout-form" :action="$page.paths.url+'/logout'" method="POST" style="display: none;">

@@ -20,6 +20,13 @@
                                     </div>
                                 </inertia-link>
                             </li>
+                            <li class="menu-item" v-if="$page.user">
+                                <a class="dropdown-item" :href="$page.paths.url+'/app'">
+                                     <div class="item-title">
+                                         <span>App</span>
+                                     </div>
+                                </a>
+                            </li>
                             <li class="menu-item" v-if="isAdmin($page.user)">
                                 <a class="dropdown-item" :href="$page.paths.url+'/admin'">
                                      <div class="item-title">
