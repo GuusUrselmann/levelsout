@@ -1,12 +1,18 @@
 <template>
     <div class="datatable">
         <div class="datatable-header">
-            <div class="table-amount">
-                <div class="input-select">
-                    <div class="select-text">
-                        {{table.amount}}
+            <div class="table-search">
+                <input type="text" placeholder="search..." />
+                <div class="search-button">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div class="table-amount" v-click-outside="amountClose">
+                <div class="amount-select">
+                    <div class="select-text" v-on:click="amountToggle">
+                        {{table.amount}} <i class="fas fa-sort-down" v-if="!amountToggled"></i><i class="fas fa-sort-up" v-else></i>
                     </div>
-                    <div class="select-dropdown">
+                    <div class="select-dropdown" v-bind:class="{toggled: amountToggled}">
                         <div class="select-select" v-on:click="tableSetAmount(10)">10</div>
                         <div class="select-select" v-on:click="tableSetAmount(25)">25</div>
                         <div class="select-select" v-on:click="tableSetAmount(50)">50</div>
@@ -14,7 +20,6 @@
                     </div>
                 </div>
             </div>
-            <div v-if="state.isLoading">LOADING</div>
         </div>
         <div class="datatable-body">
             <div class="datatable-content">
@@ -53,6 +58,7 @@
             return {
                 ajaxUrl: url()+'/api/datatables/users',
                 userData: Object,
+                amountToggled: false,
                 table: {
                     amount: 0,
                     page: 0
@@ -88,7 +94,16 @@
            },
            tableSetAmount(amount) {
                this.table.amount = amount;
+               this.amountClose();
                this.getTableData();
+           },
+           amountToggle() {
+               this.amountToggled = this.amountToggled ? false : true;
+           },
+           amountClose() {
+               if(this.amountToggled) {
+                   this.amountToggled = false;
+               }
            }
         },
         mounted: function() {
