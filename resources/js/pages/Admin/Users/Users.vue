@@ -1,28 +1,26 @@
 <template>
     <layout >
-        <DataTable :tabledata="tableData" />
+        <div class="content-block" id="users">
+            <div class="block-header">
+                <div class="block-title">Users</div>
+            </div>
+            <div class="block-body">
+                <DataTableUsers />
+            </div>
+        </div>
     </layout>
 </template>
 
 <script>
     import Layout from '../../Layouts/Admin/Layout';
-    import DataTable from '../../../Components/Admin/DataTable';
+    import DataTableUsers from '../../../Components/Admin/DataTableUsers';
     export default {
         components: {
             Layout,
-            DataTable
+            DataTableUsers
         },
         props: {
             users: Array
-        },
-        data () {
-            return {
-                tableData: {
-                    dataModels: [
-                        'hi', 'nigger'
-                    ]
-                }
-            }
-        },
+        }
     }
 </script>

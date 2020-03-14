@@ -5,9 +5,9 @@
 /*==============================*/
 
 @media only screen and (min-width: 1200px) {
-  /*Admin Dashboard page*/
+  /*Admin Users page*/
 
-  #submissions {
+  #users {
     grid-column: 1/4;
     grid-row: 1;
   }
@@ -20,9 +20,9 @@
 /*==============================*/
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
-  /*Admin Dashboard page*/
+  /*Admin Users page*/
 
-  #submissions {
+  #users {
     grid-column: 1/4;
     grid-row: 1;
   }
@@ -35,9 +35,9 @@
 /*==============================*/
 
 @media only screen and (min-width: 660px) and (max-width: 959px) {
-  /*Admin Dashboard page*/
+  /*Admin Users page*/
 
-  #submissions {
+  #users {
     grid-column: 1/4;
     grid-row: 1;
   }
@@ -50,9 +50,9 @@
 /*==============================*/
 
 @media only screen and (min-width: 480px) and (max-width: 659px) {
-  /*Admin Dashboard page*/
+  /*Admin Users page*/
 
-  #submissions {
+  #users {
     grid-column: 1/4;
     grid-row: 1;
   }
@@ -65,9 +65,9 @@
 /*==============================*/
 
 @media only screen and (max-width: 479px) {
-  /*Admin Dashboard page*/
+  /*Admin Users page*/
 
-  #submissions {
+  #users {
     grid-column: 1/4;
     grid-row: 1;
   }

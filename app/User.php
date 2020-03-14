@@ -39,6 +39,6 @@ class User extends Authenticatable
     ];
 
     public function level() {
-        return $this->belongsTo(Level::class)->first()->level;
+        return $this->belongsTo(Level::class);
     }
 }

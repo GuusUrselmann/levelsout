@@ -6,6 +6,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name') }}</title>
+
+        <script type="text/javascript">
+            function url() {
+                return '<?= url('') ?>';
+            }
+        </script>
         <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
         <link href="{{ asset('fonts/fontawesome-free-5.3.1-web/css/all.min.css') }}" rel="stylesheet" type="text/css" >
         <script src="{{ asset('/js/app.js') }}" defer></script>

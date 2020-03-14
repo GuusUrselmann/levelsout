@@ -6,7 +6,7 @@
         <div class="sidebar-content">
             <div class="sidebar-content" id="smfull">
                 <div class="sidebar-logo">
-                    <div class="bg-logo" :style="'background-image: url('+$page.paths.asset+'/images/oshi.jpg)'">
+                    <div class="bg-logo" :style="'background-image: url('+$page.paths.asset+'images/oshi.jpg)'">
                     </div>
                 </div>
                 <div class="nav-sidebar">

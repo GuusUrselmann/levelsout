@@ -36,3 +36,9 @@ Route::group(['prefix'=>'/admin'], function() {
         Route::get('/', 'Admin\AdminQuestionsController@questions');
     });
 });
+
+Route::group(['prefix'=>'/api'], function() {
+    Route::group(['prefix'=>'/datatables'], function() {
+        Route::post('/users', 'ApiController@datatableusers');
+    });
+});
