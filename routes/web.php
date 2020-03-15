@@ -39,6 +39,6 @@ Route::group(['prefix'=>'/admin'], function() {
 
 Route::group(['prefix'=>'/api'], function() {
     Route::group(['prefix'=>'/datatables'], function() {
-        Route::post('/users', 'ApiController@datatableusers');
+        Route::post('/users', 'APIController@datatableusers');
     });
 });
