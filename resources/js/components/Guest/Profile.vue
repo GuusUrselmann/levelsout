@@ -21,7 +21,7 @@
                     <div class="info-level">
                         <div class="level-inner">
                             <div class="level-userlevel">
-                                LVL {{$page.user.level}}
+                                LVL {{$page.user.level.level}}
                             </div>
                         </div>
                     </div>

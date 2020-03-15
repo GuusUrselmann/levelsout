@@ -32,7 +32,7 @@ class InertiaGuest
         Inertia::share('user', function() {
             if(Auth::user()) {
                 $user = Auth::user();
-                $user->setAttribute('level', $user->level());
+                $user->setAttribute('level', $user->level()->first());
                 return $user;
             }
             return false;

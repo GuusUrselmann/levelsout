@@ -301,15 +301,15 @@ main {
         background-color: $grey-light;
         margin-bottom: 5px;
         .table-search {
-            max-width: 250px;
+            max-width: 370px;
             height: 55px;
             padding: 5px;
             padding-left: 15px;
             padding-top: 15px;
             display: block;
             float: left;
-            input {
-                width: calc(100% - 50px);
+            .search-input {
+                width: calc(100% - 170px);
                 height: 35px;
                 background-color: transparent;
                 border: none;
@@ -325,6 +325,49 @@ main {
                 height: 35px;
                 &:hover {
                     cursor: pointer;
+                }
+            }
+            .search-fields {
+                width: 120px;
+                height: 35px;
+                padding-top: 5px;
+                display: inline-block;
+                .fields-select {
+                    width: 100%;
+                    height: 30px;
+                    .select-text {
+                        width: 100%;
+                        height: 30px;
+                        line-height: 30px;
+                        i {
+                            height: 30px;
+                            vertical-align: middle;
+                        }
+                    }
+                    .select-dropdown {
+                        display: none;
+                        width: 200px;
+                        background-color: $grey-light;
+                        border: 1px solid $grey-med;
+                        .select-select {
+                            width: 100%;
+                            height: 25px;
+                            line-height: 25px;
+                            padding: 0px 10px;
+                            label {
+                                width: 100%;
+                                height: 25px;
+                                display: block;
+                                input {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        &.toggled {
+                            display: block;
+                            position: absolute;
+                        }
+                    }
                 }
             }
         }
@@ -356,10 +399,15 @@ main {
                         height: 25px;
                         line-height: 25px;
                         padding: 0px 10px;
+                        &:hover {
+                            background-color: $grey-med;
+                            color: #fff;
+                            cursor: pointer;
+                        }
                     }
                     &.toggled {
                         display: block;
-                        position: relative;
+                        position: absolute;
                     }
                 }
             }

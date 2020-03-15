@@ -21,14 +21,10 @@ class AdminUsersController extends Controller
     {
         $this->middleware('auth');
         $this->middleware('inertia.admin');
-        // $this->middleware('admin');
     }
 
     public function Users()
     {
-        $users = User::with('level:id,level');
-        $users = $users->select(['id','name','description','email','level_id','userlevel'])->take(10)->get();
-        //dd($users);
         return Inertia::render('Admin/Users/Users');
     }
 }

@@ -17,13 +17,14 @@ class AppHomeController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth');
         $this->middleware('inertia.app');
     }
 
     public function home()
     {
         $user = Auth::user();
-        $level_step = ceil($user->level()/4)*4-4;
+        $level_step = ceil($user->level()->first()->level/4)*4-4;
         $levels = Level::where('level', '>', $level_step)->take(4)->get();
         return Inertia::render('App/Home/Home', [
             'levels' => $levels

@@ -20,7 +20,7 @@
                     <div class="level-top">
                         {{index==0?'LEVEL ':''}}{{level.level}}
                     </div>
-                    <div class="level-bar" v-bind:class="{complete: $page.user.level>level.level}">
+                    <div class="level-bar" v-bind:class="{complete: $page.user.level.level>level.level}">
                     </div>
                 </div>
             </div>

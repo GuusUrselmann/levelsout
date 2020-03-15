@@ -316,7 +316,7 @@ main {
 }
 
 .datatable .datatable-header .table-search {
-  max-width: 250px;
+  max-width: 370px;
   height: 55px;
   padding: 5px;
   padding-left: 15px;
@@ -325,8 +325,8 @@ main {
   float: left;
 }
 
-.datatable .datatable-header .table-search input {
-  width: calc(100% - 50px);
+.datatable .datatable-header .table-search .search-input {
+  width: calc(100% - 170px);
   height: 35px;
   background-color: transparent;
   border: none;
@@ -345,6 +345,58 @@ main {
 
 .datatable .datatable-header .table-search .search-button:hover {
   cursor: pointer;
+}
+
+.datatable .datatable-header .table-search .search-fields {
+  width: 120px;
+  height: 35px;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select {
+  width: 100%;
+  height: 30px;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-text {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-text i {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-dropdown {
+  display: none;
+  width: 200px;
+  background-color: #e5e5e5;
+  border: 1px solid #1f1f1f;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-dropdown .select-select {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  padding: 0px 10px;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-dropdown .select-select label {
+  width: 100%;
+  height: 25px;
+  display: block;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-dropdown .select-select label input {
+  margin-right: 10px;
+}
+
+.datatable .datatable-header .table-search .search-fields .fields-select .select-dropdown.toggled {
+  display: block;
+  position: absolute;
 }
 
 .datatable .datatable-header .table-amount {
@@ -385,9 +437,15 @@ main {
   padding: 0px 10px;
 }
 
+.datatable .datatable-header .table-amount .amount-select .select-dropdown .select-select:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+  cursor: pointer;
+}
+
 .datatable .datatable-header .table-amount .amount-select .select-dropdown.toggled {
   display: block;
-  position: relative;
+  position: absolute;
 }
 
 .datatable .datatable-body {
