@@ -142,7 +142,7 @@ main {
   height: 100vh;
   padding-top: 25px;
   position: fixed;
-  background-color: #141414;
+  background-color: #252a34;
   border-right: 1px solid #1f1f1f;
   color: #fff;
   transition: width ease-in-out 0.2s;
@@ -153,7 +153,7 @@ main {
   color: #fff;
 }
 
-.sidebar-toggle {
+.sidebar .sidebar-toggle {
   position: absolute;
   right: 0px;
   width: 50px;
@@ -167,110 +167,83 @@ main {
   transition: right ease-in-out 0.1s, color ease-in-out 0.1s;
 }
 
-.sidebar-toggle:hover {
+.sidebar .sidebar-toggle:hover {
   cursor: pointer;
 }
 
-.sidebar-content .sidebar-logo {
+.sidebar .sidebar-content .sidebar-logo {
   width: 100%;
   height: 160px;
   padding-top: 20px;
 }
 
-.sidebar-content .sidebar-logo .bg-logo {
+.sidebar .sidebar-content .sidebar-logo .bg-logo {
   width: 100px;
   height: 100px;
   margin: auto;
   border: 1px solid #bf9418;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 
-.sidebar-content #smfull .menu-item {
+.sidebar .sidebar-content .nav-sidebar {
   width: 100%;
+}
+
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar {
+  width: 100%;
+}
+
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item {
+  width: 100%;
+  height: 45px;
   box-sizing: border-box;
 }
 
-.sidebar-content #smfull .menu-item:last-child .item-title {
-  border-bottom: 1px solid #0d0d0d;
-}
-
-.sidebar-content #smfull .menu-item.active .item-title {
-  border-left-color: #bf9418;
-}
-
-.sidebar-content #smfull .menu-item.active .submenu {
-  display: block;
-}
-
-.sidebar-content #smfull .menu-item.active .submenu .item-title {
-  border-left-color: transparent;
-}
-
-.sidebar-content #smfull .item-title {
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item a .item-title {
   height: 45px;
   line-height: 45px;
   font-size: 22px;
-  border-top: 1px solid #0d0d0d;
   border-left: 5px solid transparent;
   padding-left: 10px;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.sidebar-content #smfull .menu-item i {
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item a .item-title i {
   width: 100%;
 }
 
-.sidebar-content #smfull .submenu {
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item .submenu {
+  width: 100%;
   display: none;
+  position: relative;
+  right: -100%;
+  top: -45px;
+  background-color: #1f1f1f;
+  padding-top: 10px;
 }
 
-.sidebar-content #smfull .submenu .menu-item .item-title {
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item .submenu .menu-item-sub {
+  width: 100%;
+}
+
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item .submenu .menu-item-sub a .item-title {
   height: 35px;
   line-height: 35px;
   border-bottom: none;
   background-color: #1f1f1f;
 }
 
-.sidebar-content #smsmall {
-  display: none;
-  color: #fff;
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item .submenu .menu-item-sub:hover a .item-title {
+  color: #bf9418;
 }
 
-.sidebar-content #smsmall .sidebar-logo {
-  width: 100%;
-  height: 160px;
-  padding-top: 20px;
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item:hover {
+  background-color: #6a2c70;
 }
 
-.sidebar-content #smsmall .menu-item {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.sidebar-content #smsmall .menu-item:last-child .item-title {
-  border-bottom: 1px solid #0d0d0d;
-}
-
-.sidebar-content #smsmall .menu-item .item-title {
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  font-size: 22px;
-  text-align: center;
-  border-top: 1px solid #0d0d0d;
-  border-left: 5px solid transparent;
-}
-
-.sidebar-content #smsmall .menu-item.active .item-title {
-  border-left-color: #bf9418;
-}
-
-.sidebar-content #smsmall i {
-  color: #fff;
+.sidebar .sidebar-content .nav-sidebar .menu-sidebar .menu-item:hover .submenu {
+  display: block;
 }
 
 /*CONTENT BLOCKS*/
@@ -459,6 +432,7 @@ main {
 .datatable .datatable-body .datatable-content .table-field {
   width: 100%;
   overflow: auto;
+  padding-bottom: 5px;
 }
 
 .datatable .datatable-body .datatable-content .table-field table {
@@ -497,5 +471,17 @@ main {
 
 .datatable .datatable-body .datatable-content .table-field table .table-datarow:nth-child(odd) {
   background-color: #e5e5e5;
+}
+
+.datatable .datatable-body .datatable-content .table-empty {
+  width: 100%;
+  line-height: 65px;
+}
+
+.datatable .datatable-body .datatable-content .table-empty .empty-message {
+  width: 100%;
+  line-height: 65px;
+  font-size: 22px;
+  text-align: center;
 }
 

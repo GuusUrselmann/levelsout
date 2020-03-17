@@ -2,7 +2,7 @@
     <div class="datatable">
         <div class="datatable-header">
             <div class="table-search">
-                <input class="search-input" type="text" placeholder="search..." v-on:keyup.enter="tableSetSearch" />
+                <input class="search-input" type="text" placeholder="search..." v-on:keyup="tableSetSearch" />
                 <div class="search-button" v-on:click="tableSetSearch">
                     <i class="fas fa-search"></i>
                 </div>
@@ -39,23 +39,32 @@
             <div class="datatable-content">
                 <div class="table-field">
                     <table cellpadding="0" cellspacing="0">
-                        <tr class="table-header">
-                            <th class="header-item" style="width: 70px;">id</th>
-                            <th class="header-item" style="width: 120px;">name</th>
-                            <th class="header-item" style="width: 350px;">description</th>
-                            <th class="header-item" style="width: 180px;">email</th>
-                            <th class="header-item" style="width: 70px;">level</th>
-                            <th class="header-item" style="width: 100px;">userlevel</th>
-                        </tr>
-                        <tr class="table-datarow" v-for="(data, index) in userData">
-                            <td class="data-item id">{{data.id}}</td>
-                            <td class="data-item name">{{data.name}}</td>
-                            <td class="data-item description" :title="data.description">{{data.description}}</td>
-                            <td class="data-item email">{{data.email}}</td>
-                            <td class="data-item level">{{data.level.level}}</td>
-                            <td class="data-item userlevel">{{data.userlevel}}</td>
-                        </tr>
+                        <thead>
+                            <tr class="table-header">
+                                <th class="header-item" style="width: 70px;">id</th>
+                                <th class="header-item" style="width: 120px;">name</th>
+                                <th class="header-item" style="width: 350px;">description</th>
+                                <th class="header-item" style="width: 180px;">email</th>
+                                <th class="header-item" style="width: 70px;">level</th>
+                                <th class="header-item" style="width: 100px;">userlevel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-datarow" v-for="(data, index) in userData" v-if="userData.length > 0">
+                                <td class="data-item id">{{data.id}}</td>
+                                <td class="data-item name">{{data.name}}</td>
+                                <td class="data-item description" :title="data.description">{{data.description}}</td>
+                                <td class="data-item email">{{data.email}}</td>
+                                <td class="data-item level">{{data.level.level}}</td>
+                                <td class="data-item userlevel">{{data.userlevel}}</td>
+                            </tr>
+                        </tbody>
                     </table>
+                </div>
+                <div class="table-empty" v-if="userData.length <= 0">
+                    <div class="empty-message">
+                        No users found
+                    </div>
                 </div>
             </div>
         </div>

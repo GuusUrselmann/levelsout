@@ -3,7 +3,7 @@
         <div class="block profile">
             <div class="profile-info">
                 <div class="info-image">
-                    <div class="image-inner background-cover"  :style="'background-image: url('+$page.paths.asset+'images/oshi.jpg)'">
+                    <div class="image-inner background-cover"  :style="'background-image: url('+$page.paths.asset+'images/Oshi.jpg)'">
                     </div>
                 </div>
                 <div class="info">
